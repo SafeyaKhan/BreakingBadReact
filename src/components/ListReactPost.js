@@ -21,7 +21,12 @@ class ListPost extends Component {
         return (
             <>
                 <h2>List Post</h2>
-                {posts && posts.map(post => <h3 key={post.char_id}>{post.name}</h3>)}
+                {posts && posts.map(post => {
+                return(
+                <>
+                    <h3 key={post.char_id}>{post.name}</h3>
+                    <img src={post.img} alt={post.name} />
+                </>) }  )}
             </>
         )
     }
