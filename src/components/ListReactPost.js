@@ -20,13 +20,25 @@ class ListPost extends Component {
         
         return (
             <>
-                <h2>List Post</h2>
+             <h2>List Post</h2>
+               <div id="breaking_container" className="breaking-container">
+               
                 {posts && posts.map(post => {
                 return(
-                <>
-                    <h3 key={post.char_id}>{post.name}</h3>
-                    <img src={post.img} alt={post.name} />
-                </>) }  )}
+                    <>
+                    <div className='breaking'>
+                     <div className='img-container'>
+                    <img src={post.img} alt={post.name}/>
+                    </div>
+                    <div className='info'>
+                    <h3 key={post.char_id} className='name'>{post.name}</h3>
+                    </div>
+                    </div>
+                    </>              
+                   
+               
+                ) }  )}
+                 </div>
             </>
         )
     }
